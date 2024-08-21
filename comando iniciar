@@ -1,0 +1,15 @@
+1. Descargar node.js
+  https://nodejs.org/en
+2. instalar oinic con npm install -g @ionic
+  si esta instalado, actualizar con: npm install -g @ionic/cli --force
+  version 7.2.0
+3. Crear proyecto:
+  ionic start NOMBREPROYECTO blank
+
+framework angular
+ngmodules
+y/n poner N
+4.ingresar a carpeta y ejecutar
+  ionic serve
+5.en cmd temrinal ionic generate
+  sleccionar PAGE
