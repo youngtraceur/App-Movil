@@ -13,3 +13,5 @@ y/n poner N
   ionic serve
 5.en cmd temrinal ionic generate
   sleccionar PAGE
+
+IONIC g page nombre
