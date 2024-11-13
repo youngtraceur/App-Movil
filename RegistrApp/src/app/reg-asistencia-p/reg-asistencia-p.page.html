@@ -1,0 +1,53 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <h1 class="ion-margin ion-text-center">REGISTRAPP</h1>
+    </ion-toolbar>
+  </ion-header>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/menu"></ion-back-button>
+      </ion-buttons>
+      <h1 class="ion-margin">Registrar Asistencia</h1>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <h1>Crear QR</h1>
+
+   
+    <ion-item>
+      <ion-label>Asignatura</ion-label>
+      <ion-select [(ngModel)]="selectedAsignatura" (ionChange)="onAsignaturaChange()">
+        <ion-select-option *ngFor="let asignatura of filteredAsignaturas" [value]="asignatura">
+          {{ asignatura.nombre }} ({{ asignatura.siglas }})
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    
+    <ion-item>
+      <ion-label>Sección</ion-label>
+      <ion-select [(ngModel)]="selectedSeccion">
+        <ion-select-option *ngFor="let seccion of filteredSecciones" [value]="seccion">
+          {{ seccion.seccion }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+   
+    <ion-button expand="block" (click)="generateQR()" [disabled]="!selectedAsignatura || !selectedSeccion">Generar QR</ion-button>
+
+   
+    <div *ngIf="qrData" style="text-align: center; margin-top: 20px;">
+      <h2>Código QR Generado:</h2>
+      <div style="display: flex; justify-content: center;">
+        <qrcode [qrdata]="qrData" [width]="400"></qrcode>
+      </div>
+    </div>
+  </ion-content>
+</div>

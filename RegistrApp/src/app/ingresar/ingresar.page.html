@@ -1,0 +1,50 @@
+<div class="ion-page" id="main-content" class="ion-text-center">
+  <ion-header>
+    <ion-toolbar>
+      <h1 class="ion-margin">RegistrApp</h1>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <div>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="ion-text-center">Iniciar sesión</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="ion-text-left">
+          <ion-input type="text" placeholder="Ingrese su usuario" label="Usuario" labelPlacement="floating"
+            helperText="Ingrese usuario válido" errorText="El formato no es correcto" [(ngModel)]="usuario"></ion-input>
+
+          <ion-input type="password" placeholder="Ingrese su contraseña" label="Contraseña" labelPlacement="floating"
+            helperText="Ingrese contraseña válida" [(ngModel)]="contrasena"></ion-input>
+
+          <div class="ion-text-center" style="margin-top: 15px; margin-bottom: 20px;">
+            <a href="cambiar-clave">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <ion-button (click)="ingresar()" expand="block" shape="round">
+            Ingresar
+          </ion-button>
+
+          <ion-item *ngIf="error">
+            <ion-label>Error en el ingreso, verifica tus credenciales.</ion-label>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+
+
+      <div *ngIf="usuario">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="ion-text-center">Bienvenido, {{ usuario }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p *ngIf="rol === 'profesor'">Como profesor, podrás gestionar tus clases y asistir a tus alumnos.</p>
+            <p *ngIf="rol === 'estudiante'">Como estudiante, podrás acceder a tus asignaturas y verificar tu asistencia.</p>
+          </ion-card-content>
+        </ion-card>
+      </div>
+
+    </div>
+  </ion-content>
+</div>

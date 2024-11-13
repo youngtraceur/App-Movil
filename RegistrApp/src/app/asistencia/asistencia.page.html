@@ -1,0 +1,47 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <h1 class="ion-margin" class="ion-text-center">REGISTRAPP</h1>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/menu"></ion-back-button>
+      </ion-buttons>
+      <h1 class="ion-margin">Asistencias</h1>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" style="display: flex; justify-content: center;">
+    <div>
+      <ion-text color="white">
+        <p class="ion-padding">
+          Recuerda que, por reglamento académico, debes tener un mínimo de 70% de asistencia en cada una de tus asignaturas para aprobar el curso.
+        </p>
+      </ion-text>
+
+      <!-- Sección donde se muestran las asistencias -->
+      <ion-list *ngIf="asistencias.length > 0">
+        <ion-item *ngFor="let asistencia of asistencias">
+          <ion-label>
+            <h2>Asignatura: {{ asistencia.asignaturaNombre }}</h2>
+            <p><strong>Fecha:</strong> {{ asistencia.fecha }}</p>
+            <p><strong>Carrera:</strong> {{ asistencia.carreraId }}</p>
+            <p><strong>Rol:</strong> {{ asistencia.rol }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <!-- Mensaje si no hay asistencias -->
+      <ion-text *ngIf="asistencias.length === 0" color="warning">
+        <p>No tienes asistencias registradas.</p>
+      </ion-text>
+    </div>
+  </ion-content>
+</div>

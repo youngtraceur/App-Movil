@@ -1,0 +1,213 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "IDusuario": 1,
+      "usuario": "Profesor",
+      "contrasena": "ClaveProfesor",
+      "rol": "profesor",
+      "IDcarrera": 1
+    },
+    {
+      "id": "2",
+      "IDusuario": 2,
+      "usuario": "Estudiante",
+      "contrasena": "Clave",
+      "rol": "estudiante",
+      "IDcarrera": 1,
+      "IDseccion": 1
+    },
+    {
+      "id": "3",
+      "IDusuario": 3,
+      "usuario": "Estudiante2",
+      "contrasena": "ClaveEstudiante",
+      "rol": "estudiante",
+      "IDcarrera": 1,
+      "IDseccion": 2
+    },
+    {
+      "id": "4",
+      "IDusuario": 4,
+      "usuario": "Estudiante3",
+      "contrasena": "ClaveEstudiante",
+      "rol": "estudiante",
+      "IDcarrera": 1,
+      "IDseccion": 3
+    },
+    {
+      "id": "5",
+      "IDusuario": 5,
+      "usuario": "Profesor2",
+      "contrasena": "ClaveProfesor",
+      "rol": "profesor",
+      "IDcarrera": 1
+    },
+    {
+      "id": "6",
+      "IDusuario": 6,
+      "usuario": "Profesor3",
+      "contrasena": "ClaveProfesor",
+      "rol": "profesor",
+      "IDcarrera": 1
+    }
+  ],
+  "carreras": [
+    {
+      "IDcarrera": 1,
+      "nombre": "Ingeniería en Informática",
+      "id": "4ed8"
+    },
+    {
+      "IDcarrera": 2,
+      "nombre": "Analista Programador",
+      "id": "988d"
+    }
+  ],
+  "asignaturas": [
+    {
+      "IDasignatura": 1,
+      "nombre": "Programación I",
+      "siglas": "PROG101",
+      "IDcarrera": 1,
+      "seccion": "MDY1111",
+      "id": "c833"
+    },
+    {
+      "IDasignatura": 2,
+      "nombre": "Bases de Datos",
+      "siglas": "BD102",
+      "IDcarrera": 1,
+      "seccion": "MDY1112",
+      "id": "2795"
+    },
+    {
+      "IDasignatura": 3,
+      "nombre": "Estructuras de Datos",
+      "siglas": "ED203",
+      "IDcarrera": 1,
+      "seccion": "MDY1113",
+      "id": "fdff"
+    },
+    {
+      "IDasignatura": 4,
+      "nombre": "Redes de Computadoras",
+      "siglas": "RC204",
+      "IDcarrera": 1,
+      "seccion": "MDY1114",
+      "id": "92de"
+    },
+    {
+      "IDasignatura": 5,
+      "nombre": "Matemáticas Discretas",
+      "siglas": "MDI305",
+      "IDcarrera": 1,
+      "seccion": "MDY1111",
+      "id": "c870"
+    },
+    {
+      "IDasignatura": 6,
+      "nombre": "Análisis y Diseño de Sistemas",
+      "siglas": "ADS201",
+      "IDcarrera": 2,
+      "seccion": "PNY2221",
+      "id": "9c67"
+    },
+    {
+      "IDasignatura": 7,
+      "nombre": "Programación Orientada a Objetos",
+      "siglas": "POO202",
+      "IDcarrera": 2,
+      "seccion": "PNY2222",
+      "id": "0b87"
+    },
+    {
+      "IDasignatura": 8,
+      "nombre": "Desarrollo Web",
+      "siglas": "DW303",
+      "IDcarrera": 2,
+      "seccion": "PNY2223",
+      "id": "8b0a"
+    },
+    {
+      "IDasignatura": 9,
+      "nombre": "Pruebas de Software",
+      "siglas": "PS404",
+      "IDcarrera": 2,
+      "seccion": "PNY2224",
+      "id": "882c"
+    },
+    {
+      "IDasignatura": 10,
+      "nombre": "Sistemas Operativos",
+      "siglas": "SO105",
+      "IDcarrera": 2,
+      "seccion": "PNY2221",
+      "id": "a262"
+    }
+  ],
+  "seccion": [
+    {
+      "IDseccion": 1,
+      "IDasignatura": 1,
+      "IDusuario": 1,
+      "seccion": "001D"
+    },
+    {
+      "IDseccion": 2,
+      "IDasignatura": 1,
+      "IDusuario": 1,
+      "seccion": "002D"
+    },
+    {
+      "IDseccion": 3,
+      "IDasignatura": 1,
+      "IDusuario": 5,
+      "seccion": "003D"
+    },
+    {
+      "IDseccion": 4,
+      "IDasignatura": 2,
+      "IDusuario": 1,
+      "seccion": "001D"
+    },
+    {
+      "IDseccion": 5,
+      "IDasignatura": 2,
+      "IDusuario": 1,
+      "seccion": "002D"
+    }
+  ],
+  "asistencia": [
+    {
+      "id": 1,
+      "fecha": "2024-11-13",
+      "rol": "profesor",
+      "asignaturaNombre": "Programación I",
+      "seccion": "003D",
+      "IDusuario": 5,
+      "IDseccion": 3,
+      "IDasignatura": 1
+    },
+    {
+      "id": 2,
+      "fecha": "2024-11-13",
+      "rol": "profesor",
+      "asignaturaNombre": "Programación I",
+      "seccion": "001D",
+      "IDusuario": 1,
+      "IDseccion": 1,
+      "IDasignatura": 1
+    },
+    {
+      "id": 1,
+      "fecha": "2024-11-13",
+      "rol": "estudiante",
+      "asignaturaNombre": "Programación I",
+      "seccion": "001D",
+      "IDusuario": 2,
+      "IDseccion": 1,
+      "IDasignatura": 1
+    }
+  ]
+}

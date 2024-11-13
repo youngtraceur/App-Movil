@@ -1,0 +1,32 @@
+1. Descargar node.js
+   Para version del node, en cmd "node --version"
+
+2. Instalar Ionic
+   "npm install -g @ionic/cli"
+   Para version del ionic, en cmd "ionic --version"
+
+   Si ya está instalado, actualizar con "npm install -g @ionic/cli --force"
+
+3. Crear proyecto
+   ionic start NOMBRE blank
+   seleccionar angular
+   seleccionar ngmodules
+   no crear cuenta
+
+   ingresar a la carpeta y ejecutar "ionic serve"
+
+4. Entrar a vsc y abrir carpeta
+   en una terminal dentro de vsc, ejecutar "ionic generate"
+   selecionar page
+   ingresar un nombre
+   seleccionar n
+    "C:\Users\POAPCA02LC0200\MiPrimeraApp>ionic generate
+     ? What would you like to generate? page
+     ? Name/path of page: NombrePag"
+   
+pa activar el apirest
+npx json-server db.json
+debe ejecutarse en carpeta que tenga el json
+
+qr
+npm install angularx-qrcode --save

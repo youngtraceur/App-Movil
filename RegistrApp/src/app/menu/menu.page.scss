@@ -1,0 +1,29 @@
+ion-toolbar{
+    --background: rgb(8, 44, 84);
+    color: white;
+}
+
+ion-item {
+    background-color: rgb(8, 44, 84) !important;
+    --background: rgb(8, 44, 84) !important;
+    color: white !important;
+    &:hover {
+        background-color: rgb(8, 44, 84) !important; /* Mantiene el color en hover */
+        color: white !important; /* Mantiene el color del texto */
+    }
+}
+
+ion-label {
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: white;
+    font-weight: bold;
+}
+
+ion-menu-button, ion-back-button {
+    color: white;
+}
+

@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <h1 class="ion-margin">RegistrApp</h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" style="display: flex; justify-content: center;">
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Cambiar contrasena</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <!-- Ingresar nombre de usuario -->
+        <ion-input 
+          [(ngModel)]="correo" 
+          type="text" 
+          placeholder="Ingrese su nombre de usuario" 
+          label="Usuario" 
+          labelPlacement="floating" 
+          required
+          helperText="Ingrese un nombre de usuario válido."
+          errorText="El usuario no existe."
+        ></ion-input>
+
+        <!-- Ingresar contrasena actual -->
+        <ion-input 
+          [(ngModel)]="contrasenaActual" 
+          type="password" 
+          placeholder="Ingrese su contrasena actual" 
+          label="Contrasena actual" 
+          labelPlacement="floating" 
+          required
+          helperText="Ingrese la contrasena actual." 
+        >
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+
+        <!-- Ingresar nueva contrasena -->
+        <ion-input 
+          [(ngModel)]="nuevaContrasena" 
+          type="password" 
+          placeholder="Ingrese su nueva contrasena" 
+          label="Nueva contrasena" 
+          labelPlacement="floating" 
+          required
+          helperText="Ingrese la nueva contrasena." 
+        >
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+
+        <!-- Confirmar nueva contrasena -->
+        <ion-input 
+          [(ngModel)]="confirmarContrasena" 
+          type="password" 
+          placeholder="Reingrese su nueva contrasena" 
+          label="Reingresar contrasena" 
+          labelPlacement="floating" 
+          required
+          helperText="Confirme la nueva contrasena." 
+        >
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input><br>
+
+        <!-- Botón para cambiar la contrasena -->
+        <ion-button 
+          expand="block" 
+          shape="round" 
+          (click)="cambiarContrasena()">Cambiar contrasena
+        </ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

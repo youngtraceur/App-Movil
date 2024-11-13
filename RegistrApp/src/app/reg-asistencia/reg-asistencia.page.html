@@ -1,0 +1,50 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <h1 class="ion-margin ion-text-center">REGISTRAPP</h1>
+    </ion-toolbar>
+  </ion-header>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/menu"></ion-back-button>
+      </ion-buttons>
+      <h1 class="ion-margin">Registrar Asistencia</h1>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding" style="display: flex; justify-content: center;">
+    <div>
+      
+      <ion-button expand="block" (click)="setCameraModalOpen(true)">Escanear QR</ion-button>
+      <ion-modal [isOpen]="isCameraModalOpen">
+        <ng-template>
+          <ion-header>
+            <ion-toolbar>
+              <ion-title>Escanear</ion-title>
+              <ion-buttons slot="end">
+                <ion-button (click)="setCameraModalOpen(false)" style="--color: white;">Cerrar</ion-button>
+              </ion-buttons>
+            </ion-toolbar>
+          </ion-header>
+          
+          <ion-content class="ion-padding">
+            <p>Habilita tu cámara para escanear el QR y registrar tu asistencia.</p>
+            
+      
+            <ion-button expand="block" (click)="scanQR()">Iniciar Escaneo</ion-button>
+
+            <ion-button expand="block" color="danger" (click)="stopQRScanner()">Cerrar Cámara</ion-button>
+
+            <div *ngIf="scannedData">
+              <p><strong>Contenido del QR:</strong> {{ scannedData }}</p>
+            </div>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </div>
+  </ion-content>
+</div>
